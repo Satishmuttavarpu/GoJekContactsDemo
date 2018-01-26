@@ -11,7 +11,6 @@ import UIKit
 class GoJekContactsListViewModel: ListViewModel {
     
     weak var viewDelegate: ListViewModelViewDelegate?
-    weak var coordinatorDelegate: ListViewModelCoordinatorDelegate?
     
     fileprivate var items: [ContactItem]?
     

@@ -13,12 +13,8 @@ protocol ListViewModelViewDelegate: class
     func itemsDidChange(viewModel: ListViewModel)
 }
 
-protocol ListViewModelCoordinatorDelegate: class
-{
-   
-}
-
 protocol ListViewModel
 {
-  
+    var numberOfItems: Int { get }
+    func itemAtIndex(_ index: Int) -> ContactItem?
 }

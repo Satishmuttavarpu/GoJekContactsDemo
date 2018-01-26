@@ -30,7 +30,6 @@ public class GoJekServiceManager {
         
         session = URLSession(configuration: configuration)
     }
-
     
     public func fetchContactList(_ completion: @escaping (_ ids: Array<Any>?, _ error: Error?) -> Void) {
         sendRequest(path: ContactsURL, method: "GET", params: nil) { (data, response, error) in
@@ -46,6 +45,61 @@ public class GoJekServiceManager {
                 print("json error: \(error.localizedDescription)")
             }
         }
+    }
+    
+    public func fetchContactDetail(path:URL?,completion: @escaping (_ ids: Dictionary<String, Any>?, _ error: Error?) -> Void )
+    {
+        sendRequest(path: path, method: "GET", params: nil) { (data, response, error) in
+            do {
+                if  error == nil
+                {
+                    let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, Any>
+                    completion(json,error)
+                }else{
+                    completion(nil,error)
+                }
+            } catch let error as NSError {
+                print("json error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+     func updateContactDetail(contactItem:ContactItem?,completion: @escaping (_ ids: Dictionary<String, Any>?, _ error: Error?) -> Void )
+    {
+        if let item = contactItem
+        {
+            let somedate = Date()
+            let dateTime = somedate.GoJekstringFromDate()
+
+            let dict: [String:Any] = [
+                "first_name" : item.firstName,
+                "last_name" : item.lastName,
+                "email" : item.emailId,
+                "phone_number" : item.phoneNumber,
+                "profile_pic" : item.profilePic,
+                "favorite" : item.favorite,
+                "created_at" : dateTime,
+                "updated_at" : dateTime
+            ]
+            
+            let url = GetContactURL(id: String(item.id))
+            sendRequest(path: url, method: "PUT", params: dict) { (data, response, error) in
+                do {
+                    if  error == nil
+                    {
+                        let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, Any>
+                        completion(json,error)
+                    }else{
+                        completion(nil,error)
+                    }
+                } catch let error as NSError {
+                    print("json error: \(error.localizedDescription)")
+                }
+            }
+        }
+       
+        
+        
     }
     
     
@@ -67,6 +121,7 @@ public class GoJekServiceManager {
             nsURL.httpMethod = "PUT"
         }
         
+        nsURL.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if method == "PUT" || method == "POST"
         {
             guard let parameters = params else {

@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5809E1CD201BA7C4009ACD5E /* dateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809E1CC201BA7C4009ACD5E /* dateExtension.swift */; };
+		5809E1D1201BB654009ACD5E /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809E1D0201BB654009ACD5E /* MessageComposer.swift */; };
+		5809E1D3201BB957009ACD5E /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809E1D2201BB957009ACD5E /* MailComposer.swift */; };
 		58308A1B201B14A900BBC407 /* GoJekCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */; };
 		58308A1F201B4D5100BBC407 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A1E201B4D5100BBC407 /* ImageExtension.swift */; };
+		58308A23201B530D00BBC407 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58308A22201B530D00BBC407 /* MBProgressHUD.framework */; };
+		58308A25201B535600BBC407 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A24201B535600BBC407 /* ViewControllerExtension.swift */; };
+		58308A26201B55A900BBC407 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58308A22201B530D00BBC407 /* MBProgressHUD.framework */; };
+		58308A27201B55A900BBC407 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58308A22201B530D00BBC407 /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		58308A2C201B563100BBC407 /* GoJekDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */; };
+		58308A2E201B58F900BBC407 /* GoJekDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */; };
+		58308A30201B72AB00BBC407 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2F201B72AB00BBC407 /* DetailViewModel.swift */; };
 		58F85A51201A295E00BA5BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A50201A295E00BA5BEB /* AppDelegate.swift */; };
-		58F85A53201A295E00BA5BEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A52201A295E00BA5BEB /* ViewController.swift */; };
 		58F85A56201A295E00BA5BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F85A54201A295E00BA5BEB /* Main.storyboard */; };
 		58F85A59201A295E00BA5BEB /* GoJekContact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A57201A295E00BA5BEB /* GoJekContact.xcdatamodeld */; };
 		58F85A5B201A295E00BA5BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F85A5A201A295E00BA5BEB /* Assets.xcassets */; };
@@ -22,12 +31,33 @@
 		58F85A76201A359300BA5BEB /* GoJekServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A75201A359300BA5BEB /* GoJekServiceManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		58308A28201B55A900BBC407 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				58308A27201B55A900BBC407 /* MBProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5809E1CC201BA7C4009ACD5E /* dateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateExtension.swift; sourceTree = "<group>"; };
+		5809E1D0201BB654009ACD5E /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
+		5809E1D2201BB957009ACD5E /* MailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
 		58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekCustomCell.swift; sourceTree = "<group>"; };
 		58308A1E201B4D5100BBC407 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		58308A22201B530D00BBC407 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
+		58308A24201B535600BBC407 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekDetailViewController.swift; sourceTree = "<group>"; };
+		58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekDetailViewModel.swift; sourceTree = "<group>"; };
+		58308A2F201B72AB00BBC407 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		58F85A4D201A295E00BA5BEB /* GoJekContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoJekContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F85A50201A295E00BA5BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58F85A52201A295E00BA5BEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58F85A55201A295E00BA5BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58F85A58201A295E00BA5BEB /* GoJekContact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoJekContact.xcdatamodel; sourceTree = "<group>"; };
 		58F85A5A201A295E00BA5BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58308A26201B55A900BBC407 /* MBProgressHUD.framework in Frameworks */,
+				58308A23201B530D00BBC407 /* MBProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +87,18 @@
 			isa = PBXGroup;
 			children = (
 				58308A1E201B4D5100BBC407 /* ImageExtension.swift */,
+				58308A24201B535600BBC407 /* ViewControllerExtension.swift */,
+				5809E1CC201BA7C4009ACD5E /* dateExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		58308A21201B52F500BBC407 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				58308A22201B530D00BBC407 /* MBProgressHUD.framework */,
+			);
+			path = FrameWork;
 			sourceTree = "<group>";
 		};
 		58F85A44201A295E00BA5BEB = {
@@ -79,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				58F85A50201A295E00BA5BEB /* AppDelegate.swift */,
-				58F85A52201A295E00BA5BEB /* ViewController.swift */,
+				58308A21201B52F500BBC407 /* FrameWork */,
 				58308A1D201B4D3900BBC407 /* Extension */,
 				58F85A65201A299900BA5BEB /* Model */,
 				58F85A68201A29C200BA5BEB /* View */,
@@ -107,6 +149,7 @@
 			children = (
 				58F85A6A201A2A0B00BA5BEB /* GoJekContactsList.swift */,
 				58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */,
+				58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +159,7 @@
 			children = (
 				58F85A6F201A2AFF00BA5BEB /* Protocols */,
 				58F85A6D201A2A4700BA5BEB /* GoJekContactsListViewModel.swift */,
+				58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				58F85A70201A2B6800BA5BEB /* ListViewModel.swift */,
+				58308A2F201B72AB00BBC407 /* DetailViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -140,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				58F85A73201A2DC700BA5BEB /* ContactItem.swift */,
+				5809E1D0201BB654009ACD5E /* MessageComposer.swift */,
+				5809E1D2201BB957009ACD5E /* MailComposer.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -154,6 +201,7 @@
 				58F85A49201A295E00BA5BEB /* Sources */,
 				58F85A4A201A295E00BA5BEB /* Frameworks */,
 				58F85A4B201A295E00BA5BEB /* Resources */,
+				58308A28201B55A900BBC407 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,12 +265,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F85A76201A359300BA5BEB /* GoJekServiceManager.swift in Sources */,
-				58F85A53201A295E00BA5BEB /* ViewController.swift in Sources */,
+				5809E1CD201BA7C4009ACD5E /* dateExtension.swift in Sources */,
 				58F85A74201A2DC700BA5BEB /* ContactItem.swift in Sources */,
 				58308A1F201B4D5100BBC407 /* ImageExtension.swift in Sources */,
+				58308A2C201B563100BBC407 /* GoJekDetailViewController.swift in Sources */,
 				58F85A6E201A2A4700BA5BEB /* GoJekContactsListViewModel.swift in Sources */,
 				58F85A71201A2B6800BA5BEB /* ListViewModel.swift in Sources */,
 				58F85A6B201A2A0B00BA5BEB /* GoJekContactsList.swift in Sources */,
+				5809E1D3201BB957009ACD5E /* MailComposer.swift in Sources */,
+				58308A25201B535600BBC407 /* ViewControllerExtension.swift in Sources */,
+				5809E1D1201BB654009ACD5E /* MessageComposer.swift in Sources */,
+				58308A2E201B58F900BBC407 /* GoJekDetailViewModel.swift in Sources */,
+				58308A30201B72AB00BBC407 /* DetailViewModel.swift in Sources */,
 				58308A1B201B14A900BBC407 /* GoJekCustomCell.swift in Sources */,
 				58F85A59201A295E00BA5BEB /* GoJekContact.xcdatamodeld in Sources */,
 				58F85A51201A295E00BA5BEB /* AppDelegate.swift in Sources */,
@@ -363,6 +417,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A5P5L95C8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoJekContact/FrameWork",
+				);
 				INFOPLIST_FILE = GoJekContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSB.GoJekContact;
@@ -377,6 +436,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A5P5L95C8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoJekContact/FrameWork",
+				);
 				INFOPLIST_FILE = GoJekContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSB.GoJekContact;

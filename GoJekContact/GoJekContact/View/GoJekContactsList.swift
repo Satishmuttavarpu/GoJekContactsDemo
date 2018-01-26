@@ -12,18 +12,23 @@ class GoJekContactsList: UITableViewController {
 
     // View Controller's local variables
     private let viewModel = GoJekContactsListViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        //Customize NavBar
+        customizeNavBar()
         // Initial load of data
         fetchContactList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.isChange{
+            appDelegate.isChange = false
+            // Refresh updated data
+            fetchContactList()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +39,24 @@ class GoJekContactsList: UITableViewController {
     // MARK: Private Methods
     func fetchContactList() {
         viewModel.viewDelegate = self
+        self.showDataLoadingProgressHUD()
         viewModel.getContactListFromServer()
+    }
+    
+    func customizeNavBar() {
+        //Create Right Bar Button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addContactMethod))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.green;
+        
+        //Create Left Bar Button
+        let leftBarButton = UIBarButtonItem(title: "Groups", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.green;
+        navigationItem.title = "Contacts"
+    }
+    
+    @objc func addContactMethod() {
+        
     }
     
     // MARK: - Table view data source
@@ -66,12 +88,24 @@ class GoJekContactsList: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return viewModel.sections.map { $0.title }
     }
+    
+    //MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = viewModel.itemAtIndex(viewModel.sections[indexPath.section].index + indexPath.row)
+        {
+            let detailView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekDetailViewController") as! GoJekDetailViewController
+            detailView.contactUrl = item.url;
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+    }
 }
 
 extension GoJekContactsList: ListViewModelViewDelegate
 {
     func itemsDidChange(viewModel: ListViewModel)
     {
+        self.hideDataLoadingProgressHUD()
         tableView.reloadData()
     }
 }
