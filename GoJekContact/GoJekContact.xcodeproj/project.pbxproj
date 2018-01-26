@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58308A1B201B14A900BBC407 /* GoJekCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */; };
+		58308A1F201B4D5100BBC407 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A1E201B4D5100BBC407 /* ImageExtension.swift */; };
 		58F85A51201A295E00BA5BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A50201A295E00BA5BEB /* AppDelegate.swift */; };
 		58F85A53201A295E00BA5BEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A52201A295E00BA5BEB /* ViewController.swift */; };
 		58F85A56201A295E00BA5BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F85A54201A295E00BA5BEB /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekCustomCell.swift; sourceTree = "<group>"; };
+		58308A1E201B4D5100BBC407 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		58F85A4D201A295E00BA5BEB /* GoJekContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoJekContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F85A50201A295E00BA5BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F85A52201A295E00BA5BEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58308A1D201B4D3900BBC407 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				58308A1E201B4D5100BBC407 /* ImageExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		58F85A44201A295E00BA5BEB = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +80,7 @@
 			children = (
 				58F85A50201A295E00BA5BEB /* AppDelegate.swift */,
 				58F85A52201A295E00BA5BEB /* ViewController.swift */,
+				58308A1D201B4D3900BBC407 /* Extension */,
 				58F85A65201A299900BA5BEB /* Model */,
 				58F85A68201A29C200BA5BEB /* View */,
 				58F85A69201A29C700BA5BEB /* ViewModel */,
@@ -93,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				58F85A6A201A2A0B00BA5BEB /* GoJekContactsList.swift */,
+				58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,9 +219,11 @@
 				58F85A76201A359300BA5BEB /* GoJekServiceManager.swift in Sources */,
 				58F85A53201A295E00BA5BEB /* ViewController.swift in Sources */,
 				58F85A74201A2DC700BA5BEB /* ContactItem.swift in Sources */,
+				58308A1F201B4D5100BBC407 /* ImageExtension.swift in Sources */,
 				58F85A6E201A2A4700BA5BEB /* GoJekContactsListViewModel.swift in Sources */,
 				58F85A71201A2B6800BA5BEB /* ListViewModel.swift in Sources */,
 				58F85A6B201A2A0B00BA5BEB /* GoJekContactsList.swift in Sources */,
+				58308A1B201B14A900BBC407 /* GoJekCustomCell.swift in Sources */,
 				58F85A59201A295E00BA5BEB /* GoJekContact.xcdatamodeld in Sources */,
 				58F85A51201A295E00BA5BEB /* AppDelegate.swift in Sources */,
 			);
