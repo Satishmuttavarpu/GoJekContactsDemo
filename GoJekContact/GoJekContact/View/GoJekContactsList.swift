@@ -57,6 +57,9 @@ class GoJekContactsList: UITableViewController {
     
     @objc func addContactMethod() {
         
+        let AddView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekAddEditViewController") as! GoJekAddEditViewController
+        self.navigationController?.pushViewController(AddView, animated: true)
+        
     }
     
     // MARK: - Table view data source

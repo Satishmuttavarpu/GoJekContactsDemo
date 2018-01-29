@@ -29,6 +29,7 @@
 		58F85A71201A2B6800BA5BEB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A70201A2B6800BA5BEB /* ListViewModel.swift */; };
 		58F85A74201A2DC700BA5BEB /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A73201A2DC700BA5BEB /* ContactItem.swift */; };
 		58F85A76201A359300BA5BEB /* GoJekServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A75201A359300BA5BEB /* GoJekServiceManager.swift */; };
+		58FBE33B201CDEEA00BF11C2 /* GoJekAddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBE33A201CDEEA00BF11C2 /* GoJekAddEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		58F85A70201A2B6800BA5BEB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		58F85A73201A2DC700BA5BEB /* ContactItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 		58F85A75201A359300BA5BEB /* GoJekServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekServiceManager.swift; sourceTree = "<group>"; };
+		58FBE33A201CDEEA00BF11C2 /* GoJekAddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekAddEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				58F85A6A201A2A0B00BA5BEB /* GoJekContactsList.swift */,
 				58308A1A201B14A900BBC407 /* GoJekCustomCell.swift */,
 				58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */,
+				58FBE33A201CDEEA00BF11C2 /* GoJekAddEditViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				58F85A6E201A2A4700BA5BEB /* GoJekContactsListViewModel.swift in Sources */,
 				58F85A71201A2B6800BA5BEB /* ListViewModel.swift in Sources */,
 				58F85A6B201A2A0B00BA5BEB /* GoJekContactsList.swift in Sources */,
+				58FBE33B201CDEEA00BF11C2 /* GoJekAddEditViewController.swift in Sources */,
 				5809E1D3201BB957009ACD5E /* MailComposer.swift in Sources */,
 				58308A25201B535600BBC407 /* ViewControllerExtension.swift in Sources */,
 				5809E1D1201BB654009ACD5E /* MessageComposer.swift in Sources */,
