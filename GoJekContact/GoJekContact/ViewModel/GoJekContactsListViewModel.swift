@@ -57,6 +57,8 @@ class GoJekContactsListViewModel: ListViewModel {
             
                     //prepare for section tittle and index in tableview
                     var index = 0;
+                    //clear data in sections
+                    self.sections.removeAll()
                     for i in 0..<self.numberOfItems {
                         if let item = self.itemAtIndex(i)
                         {

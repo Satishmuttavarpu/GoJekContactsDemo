@@ -435,6 +435,7 @@
 					"$(PROJECT_DIR)/GoJekContact/FrameWork",
 				);
 				INFOPLIST_FILE = GoJekContact/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSB.GoJekContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +455,7 @@
 					"$(PROJECT_DIR)/GoJekContact/FrameWork",
 				);
 				INFOPLIST_FILE = GoJekContact/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MSB.GoJekContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
