@@ -61,7 +61,6 @@ class GoJekAddEditViewController: UITableViewController{
             return
         }
     }
-    
     @objc func DoneContactMethod() {
         
         if let text = firstNameText.text, text.isEmpty
@@ -116,6 +115,13 @@ class GoJekAddEditViewController: UITableViewController{
             mobileText.text = item.phoneNumber
             emailText.text = item.emailId
         }
+    }
+}
+extension GoJekAddEditViewController: UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 
