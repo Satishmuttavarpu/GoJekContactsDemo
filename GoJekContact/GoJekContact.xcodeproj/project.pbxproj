@@ -19,6 +19,8 @@
 		58308A2C201B563100BBC407 /* GoJekDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */; };
 		58308A2E201B58F900BBC407 /* GoJekDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */; };
 		58308A30201B72AB00BBC407 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58308A2F201B72AB00BBC407 /* DetailViewModel.swift */; };
+		58A1F514201EE207002CA66A /* GoJekAddEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1F513201EE207002CA66A /* GoJekAddEditViewModel.swift */; };
+		58A1F516201EFB7D002CA66A /* AddEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1F515201EFB7D002CA66A /* AddEditViewModel.swift */; };
 		58F85A51201A295E00BA5BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A50201A295E00BA5BEB /* AppDelegate.swift */; };
 		58F85A56201A295E00BA5BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F85A54201A295E00BA5BEB /* Main.storyboard */; };
 		58F85A59201A295E00BA5BEB /* GoJekContact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58F85A57201A295E00BA5BEB /* GoJekContact.xcdatamodeld */; };
@@ -57,6 +59,8 @@
 		58308A2B201B563100BBC407 /* GoJekDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekDetailViewController.swift; sourceTree = "<group>"; };
 		58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekDetailViewModel.swift; sourceTree = "<group>"; };
 		58308A2F201B72AB00BBC407 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		58A1F513201EE207002CA66A /* GoJekAddEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoJekAddEditViewModel.swift; sourceTree = "<group>"; };
+		58A1F515201EFB7D002CA66A /* AddEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewModel.swift; sourceTree = "<group>"; };
 		58F85A4D201A295E00BA5BEB /* GoJekContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoJekContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F85A50201A295E00BA5BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F85A55201A295E00BA5BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				58F85A6F201A2AFF00BA5BEB /* Protocols */,
 				58F85A6D201A2A4700BA5BEB /* GoJekContactsListViewModel.swift */,
 				58308A2D201B58F900BBC407 /* GoJekDetailViewModel.swift */,
+				58A1F513201EE207002CA66A /* GoJekAddEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				58F85A70201A2B6800BA5BEB /* ListViewModel.swift */,
 				58308A2F201B72AB00BBC407 /* DetailViewModel.swift */,
+				58A1F515201EFB7D002CA66A /* AddEditViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -275,7 +281,9 @@
 				58F85A6E201A2A4700BA5BEB /* GoJekContactsListViewModel.swift in Sources */,
 				58F85A71201A2B6800BA5BEB /* ListViewModel.swift in Sources */,
 				58F85A6B201A2A0B00BA5BEB /* GoJekContactsList.swift in Sources */,
+				58A1F516201EFB7D002CA66A /* AddEditViewModel.swift in Sources */,
 				58FBE33B201CDEEA00BF11C2 /* GoJekAddEditViewController.swift in Sources */,
+				58A1F514201EE207002CA66A /* GoJekAddEditViewModel.swift in Sources */,
 				5809E1D3201BB957009ACD5E /* MailComposer.swift in Sources */,
 				58308A25201B535600BBC407 /* ViewControllerExtension.swift in Sources */,
 				5809E1D1201BB654009ACD5E /* MessageComposer.swift in Sources */,

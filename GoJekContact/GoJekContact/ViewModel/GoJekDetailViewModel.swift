@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MBProgressHUD
+import UIKit
 
 class GoJekDetailViewModel:DetailViewModel {
     weak var viewDelegate: DetailViewModelViewDelegate?
@@ -15,7 +15,6 @@ class GoJekDetailViewModel:DetailViewModel {
    fileprivate(set) var expectedContact: ContactItem?
     {
         didSet {
-            //viewDelegate?.detailDidChange(viewModel: self)
         }
     }
 
@@ -38,6 +37,7 @@ class GoJekDetailViewModel:DetailViewModel {
         }
     }
     
+    //For update favorite data in server
     func updateFavorite(isFav:Int?) {
         if let val = isFav
         {
@@ -56,7 +56,6 @@ class GoJekDetailViewModel:DetailViewModel {
                         self.viewDelegate?.detailDidChange(viewModel: self)
                     }
                 }
-                
             })
         }
     }

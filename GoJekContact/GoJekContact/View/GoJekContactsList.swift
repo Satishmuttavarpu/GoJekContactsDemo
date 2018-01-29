@@ -45,20 +45,18 @@ class GoJekContactsList: UITableViewController {
     
     func customizeNavBar() {
         //Create Right Bar Button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addContactMethod))
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.green;
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addContactMethod))
         //Create Left Bar Button
-        let leftBarButton = UIBarButtonItem(title: "Groups", style: UIBarButtonItemStyle.plain, target: self, action: nil)
-        self.navigationItem.leftBarButtonItem = leftBarButton
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.green;
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Groups", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.green
         navigationItem.title = "Contacts"
     }
     
     @objc func addContactMethod() {
         
-        let AddView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekAddEditViewController") as! GoJekAddEditViewController
-        self.navigationController?.pushViewController(AddView, animated: true)
+        let addView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekAddEditViewController") as! GoJekAddEditViewController
+        addView.isEdit = false
+        self.navigationController?.pushViewController(addView, animated: true)
         
     }
     
@@ -82,6 +80,16 @@ class GoJekContactsList: UITableViewController {
         return cell
     }
     
+    //MARK: - TableView Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = viewModel.itemAtIndex(viewModel.sections[indexPath.section].index + indexPath.row)
+        {
+            let detailView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekDetailViewController") as! GoJekDetailViewController
+            detailView.contactUrl = item.url;
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+    }
+    
     // MARK: - Table View Title for Header In Section
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.sections[section].title
@@ -91,21 +99,11 @@ class GoJekContactsList: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return viewModel.sections.map { $0.title }
     }
-    
-    //MARK: - TableView Delegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = viewModel.itemAtIndex(viewModel.sections[indexPath.section].index + indexPath.row)
-        {
-            let detailView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekDetailViewController") as! GoJekDetailViewController
-            detailView.contactUrl = item.url;
-            self.navigationController?.pushViewController(detailView, animated: true)
-        }
-    }
 }
 
 extension GoJekContactsList: ListViewModelViewDelegate
 {
+    //Call back from view model for update UI
     func itemsDidChange(viewModel: ListViewModel)
     {
         self.hideDataLoadingProgressHUD()

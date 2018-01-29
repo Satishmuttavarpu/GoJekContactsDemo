@@ -35,7 +35,9 @@ class GoJekDetailViewController: UITableViewController {
         //Making Profile Pic in Circular
         DetailProfileImg.layer.cornerRadius = DetailProfileImg.frame.size.width/2
         DetailProfileImg.clipsToBounds = true
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
         //Checking url is there are not..If there then passing to viewModel for fetch contact details
         if  let url = contactUrl {
             viewModel.viewDelegate = self
@@ -52,16 +54,17 @@ class GoJekDetailViewController: UITableViewController {
     
     func customizeNavBar() {
         //Create Right Bar Button
-        let rightBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(GoJekDetailViewController.myRightSideBarButtonItemTapped(_:)))
-        self.navigationItem.rightBarButtonItem = rightBarButton
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.green;        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(GoJekDetailViewController.editItemTapped(_:)))
         self.navigationController?.navigationBar.tintColor = UIColor.green
 
     }
     
-    @objc func myRightSideBarButtonItemTapped(_ sender:UIBarButtonItem!)
+    @objc func editItemTapped(_ sender:UIBarButtonItem!)
     {
-        print("myRightSideBarButtonItemTapped")
+        let addView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GoJekAddEditViewController") as! GoJekAddEditViewController
+        addView.isEdit = true
+        addView.editContact = viewModel.expectedContact
+        self.navigationController?.pushViewController(addView, animated: true)
     }
     
     
@@ -100,6 +103,7 @@ class GoJekDetailViewController: UITableViewController {
             }
         }
     }
+    
     @IBAction func sendEmailMethod(_ sender: Any) {
         if let email = viewModel.expectedContact?.emailId
         {
@@ -121,6 +125,7 @@ class GoJekDetailViewController: UITableViewController {
             
         }
     }
+    
     @IBAction func makeCallMethod(_ sender: Any) {
         if let num = viewModel.expectedContact?.phoneNumber
             {
@@ -162,6 +167,7 @@ class GoJekDetailViewController: UITableViewController {
 
 extension GoJekDetailViewController: DetailViewModelViewDelegate
 {
+    //Call back from view model for update UI
     func detailDidChange(viewModel: DetailViewModel)
     {
         self.hideDataLoadingProgressHUD()

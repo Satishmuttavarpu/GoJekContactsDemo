@@ -30,7 +30,8 @@ struct ContactItem: ContactDataItem
     var url: String
     var emailId: String
     var phoneNumber: String
-
+    
+    
     init(id: Int,firstName: String,lastName: String,favorite: Int,profilePic: String,url: String)
     {
         self.firstName = firstName

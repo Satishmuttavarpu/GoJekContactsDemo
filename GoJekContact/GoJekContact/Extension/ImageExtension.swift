@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 extension UIImageView {
+    
+    //Loading Image asyn. on UIImageView
     public func imageFromServerURL(urlString: String, defaultImage : String?) {
         if let di = defaultImage {
             self.image = UIImage(named: di)
